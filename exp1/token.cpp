@@ -13,20 +13,25 @@ int main(){
 			}
 			else if(n[i]=='w' && n[i+1]=='h' && n[i+2]=='i' && n[i+3]=='l' && n[i+4]=='e'){
 					cout<<"while : keyword"<<endl;
+					i=i+4;
 			
+			}
+			else if(n[i]=='d' && n[i+1]=='o'){
+				cout<<"do is a keyword"<<endl;
+				i=i+1;
 			}
 			else if(n[i]>=48 && n[i]<=57){
 				
 			cout<<n[i]<<" is a number "<<endl;
 			}
-			else if(n[i]==40 || n[i]==41){
+			else if(n[i]==40 || n[i]==41 || n[i]==';' || n[i]==123 || n[i]==125 || n[i]==91 || n[i]==93){
 				cout<<n[i]<<" is a delimeter "<<endl;
 			}
-			else if(n[i]=='+' || n[i]=='-' || n[i]=='*' || n[i]=='/' || n[i]=='%'){
-				cout<<n[i]<<" is an operand"<<endl;
+			else if(n[i]=='+' || n[i]=='-' || n[i]=='*' || n[i]=='/' || n[i]=='%' || n[i]=='=' || n[i]=='>' || n[i]=='>' || n[i]=='='){
+				cout<<n[i]<<" is an operator"<<endl;
 			}
 			else{
-				cout<<n[i]<<" is an identifier ";
+				cout<<n[i]<<" is an identifier "<<endl;
 			}
 		
 	}
