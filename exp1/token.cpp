@@ -22,7 +22,7 @@ int main(){
 			}
 			else if(n[i]>=48 && n[i]<=57){
 				
-			cout<<n[i]<<" is a number "<<endl;
+			cout<<n[i]<<" is a constant"<<endl;
 			}
 			else if(n[i]==40 || n[i]==41 || n[i]==';' || n[i]==123 || n[i]==125 || n[i]==91 || n[i]==93){
 				cout<<n[i]<<" is a delimeter "<<endl;
