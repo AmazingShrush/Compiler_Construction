@@ -8,14 +8,14 @@ int main(){
 		int a=n.length();
 		for(i=0;i<a;i++){
 			if(n[i]=='f'&&n[i+1]=='o'&&n[i+2]=='r'){
+				
 				cout<<"\tfor is a keyword"<<endl;
 				i=i+2;
 			}
 			else if(n[i]=='w' && n[i+1]=='h' && n[i+2]=='i' && n[i+3]=='l' && n[i+4]=='e'){
 					cout<<"\twhile is a keyword"<<endl;
 					i=i+4;
-			
-			}
+ 			}
 			else if(n[i]=='d' && n[i+1]=='o'){
 				cout<<"\tdo is a keyword"<<endl;
 				i=i+1;
@@ -37,8 +37,30 @@ int main(){
 				i=i+3;
 			}
 			else if(n[i]>=48 && n[i]<=57){
-				
-			cout<<"\t"<<n[i]<<" is a constant"<<endl;
+				if(n[i+1]>=48 && n[i+1]<=57){
+					if(n[i+2]>=48 && n[i+2]<=57){
+						if(n[i+3]>=48 && n[i+3]<=57){
+							if(n[i+4]>=48 && n[i+4]<=57){
+								cout<<"\t"<<n[i]<<n[i+1]<<n[i+2]<<n[i+3]<<n[i+4]<<" is a constant"<<endl;
+								i=i+4;
+							}
+							else{
+								cout<<"\t"<<n[i]<<n[i+1]<<n[i+2]<<n[i+3]<<" is a constant"<<endl;
+								i=i+3;
+							}
+						}
+						else{
+							cout<<"\t"<<n[i]<<n[i+1]<<n[i+2]<<" is a constant"<<endl;
+							i=i+2;
+						}
+					}
+					else{
+						cout<<"\t"<<n[i]<<n[i+1]<<" is a constant"<<endl;
+						i=i+1;
+					}
+				}
+				else
+					cout<<"\t"<<n[i]<<" is a constant"<<endl;
 			}
 			else if(n[i]==40 || n[i]==41 || n[i]==';' || n[i]==123 || n[i]==125 || n[i]==91 || n[i]==93 ||n[i]==','){
 				cout<<"\t"<<n[i]<<" is a delimeter "<<endl;
@@ -65,4 +87,3 @@ int main(){
 	}
 	//This is the code for analysing expressions
 }
-
