@@ -1,0 +1,14 @@
+%{
+
+%}
+%%
+[< > "<>" "<=" ">=" "=="] {printf("%s is a relational operator\n",yytext);}
+
+%%
+main(){
+	printf("Enter an operator:");
+ 	yylex();
+}
+int yywrap(void){
+	return 1;
+}

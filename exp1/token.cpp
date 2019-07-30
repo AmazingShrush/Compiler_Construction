@@ -8,9 +8,12 @@ int main(){
 		int a=n.length();
 		for(i=0;i<a;i++){
 			if(n[i]=='f'&&n[i+1]=='o'&&n[i+2]=='r'){
-				
+				if(n[i+4]==' ' ||n[i+4]=='(' ){
 				cout<<"\tfor is a keyword"<<endl;
-				i=i+2;
+				i=i+2;}
+				else{
+					
+				}
 			}
 			else if(n[i]=='w' && n[i+1]=='h' && n[i+2]=='i' && n[i+3]=='l' && n[i+4]=='e'){
 					cout<<"\twhile is a keyword"<<endl;
@@ -80,10 +83,13 @@ int main(){
 			else if(n[i]=='+' || n[i]=='-' || n[i]=='*' || n[i]=='/' || n[i]=='%' || n[i]=='=' || n[i]=='>' || n[i]=='>' || n[i]=='='){
 				cout<<"\t"<<n[i]<<" is an operator"<<endl;
 			}
+			else if(n[i]==' '){
+				continue;
+			}
 			else{
 				cout<<"\t"<<n[i]<<" is an identifier "<<endl;
 			}
 		
 	}
-	//This is the code for analysing expressions
+
 }

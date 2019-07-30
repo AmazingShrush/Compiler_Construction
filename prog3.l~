@@ -1,0 +1,16 @@
+%{
+	int v=0;
+%}
+%%
+[a e i o u A E I O U] {printf("%s is a vowel",yytext); v++;}
+[a-z A-Z] {printf("%s is a consonent",yytext);}
+%%
+int yywrap(void){
+	return 1;
+}
+main(){
+	printf("Enter a string:");
+	yylex();
+	printf("No. of vowels are: %d",v);
+
+}
